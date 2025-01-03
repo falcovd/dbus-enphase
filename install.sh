@@ -41,6 +41,16 @@ cp dbus-enphase.py "$SERVICE_DIR"
 chmod +x "$SERVICE_DIR/dbus-enphase.py"
 echo "Script dbus-enphase.py is now executable."
 
+# Create rc.local if it doesn't exist
+if [ ! -f "$RC_LOCAL" ]; then
+  echo "Creating $RC_LOCAL..."
+  cat <<EOF > $RC_LOCAL
+#!/bin/bash
+
+EOF
+  chmod +x "$RC_LOCAL"
+fi
+
 # Add script to rc.local
 if ! grep -q "$SERVICE_DIR/dbus-enphase.py" "$RC_LOCAL"; then
   echo "Adding script to $RC_LOCAL..."
