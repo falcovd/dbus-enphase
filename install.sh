@@ -36,6 +36,7 @@ mkdir -p "$SERVICE_DIR"
 echo "Copying files to $SERVICE_DIR..."
 cp -r ext "$SERVICE_DIR"
 cp dbus-enphase.py "$SERVICE_DIR"
+cp config.ini "$SERVICE_DIR"
 
 # Make script executable
 chmod +x "$SERVICE_DIR/dbus-enphase.py"
