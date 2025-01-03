@@ -15,35 +15,12 @@ A virtual device for the Victron Energy ecosystem that retrieves real-time data 
 
 ## Installation
 
-1. **Clone the Repository**:
     ```bash
     git clone https://github.com/falcovd/dbus-enphase.git
     cd dbus-enphase
-    ```
-
-2. **Install Dependencies**:
-    Ensure Python 3.x is installed on your system, then install required libraries:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Prepare the `config.ini` File**:
-    Create a `config.ini` file in the root directory with the following structure:
-    ```ini
-    [auth]
-    token = your_actual_token_here
-
-    [network]
-    ip_address = ip_address_of_enphase
-    ```
-    - Replace `your_actual_token_here` with your Enphase API token.
-    - Update `ip_address` with the IP address of your Enphase system.
-
-4. **Run the Script**:
-    ```bash
     chmod +x install.sh && ./install.sh
     ```
-
+    
 ## Configuration
 
 The `config.ini` file contains:
@@ -58,7 +35,7 @@ The `config.ini` file contains:
 ### Prerequisites
 
 - Python 3.x
-- Victron's `velib_python` library
+- Victron's `velib_python` library (included in submodule)
 
 ### Testing
 
