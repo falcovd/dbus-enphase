@@ -1,0 +1,5 @@
+[auth]
+token = your_actual_token_here
+
+[network]
+ip_address = ip_address_of_enphase
