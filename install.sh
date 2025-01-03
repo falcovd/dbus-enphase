@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-SERVICE_DIR="/services/dbus-enphase"
+SERVICE_DIR="/service/dbus-enphase"
 CONFIG_FILE="config.ini"
 RC_LOCAL="/etc/rc.local"
 
@@ -25,6 +25,7 @@ token = $TOKEN
 [network]
 ip_address = $IP_ADDRESS
 EOF
+
 echo "$CONFIG_FILE created."
 
 # Create service directory
