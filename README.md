@@ -18,6 +18,7 @@ A virtual device for the Victron Energy ecosystem that retrieves real-time data 
     ```bash
     git clone https://github.com/falcovd/dbus-enphase.git
     cd dbus-enphase
+    git submodule update --init --remote --recursive
     chmod +x install.sh && ./install.sh
     ```
     
