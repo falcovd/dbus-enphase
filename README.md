@@ -16,8 +16,10 @@ A virtual device for the Victron Energy ecosystem that retrieves real-time data 
 ## Installation
 
  ```bash
- wget https://github.com/falcovd/dbus-enphase/archive/refs/tags/v1.0.0.zip # replace v1.0.0 with the latest release
- chmod +x install.sh && ./install.sh
+wget https://github.com/falcovd/dbus-enphase/archive/refs/tags/v1.0.0.zip # replace v1.0.0 with the latest release
+unzip v1.0.0.zip
+cd v1.0.0
+chmod +x install.sh && ./install.sh
  ```
     
 ## Configuration
