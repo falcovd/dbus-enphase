@@ -31,6 +31,13 @@ The `config.ini` file contains:
 - **Network Section**:
   - `ip_address`: IP address of the Enphase system.
 
+## Limitations
+In this version there are some limitations, because I have developed the system primarily for my own use. The limitations are:
+- Only metering and parsing 1 phase
+- Hardcoded 230V on L1 Voltage
+- Calculating Amps from L1 - (PV production / 230)
+- Hardcoded maximum power 4350W (my PV capacity)
+
 ## Development
 
 ### Prerequisites
