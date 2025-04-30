@@ -67,6 +67,7 @@ class DbusEnphaseService:
         }
 
     def _update(self):
+        now = 0;
         try:
             req_headers = self._get_headers()
             ip_address = self._config['ip_address']
@@ -82,12 +83,14 @@ class DbusEnphaseService:
             kWh_lifetime = round(data["production"][0]["whLifetime"] / 1000, 3)
 
             self._dbusservice['/Ac/Energy/Forward'] = kWh_lifetime
-            self._dbusservice['/Ac/Power'] = now
-            self._dbusservice['/Ac/L1/Power'] = now
-            self._dbusservice['/Ac/L1/Voltage'] = 230
-            self._dbusservice['/Ac/L1/Current'] = round(now / 230, 3)
         except Exception as e:
             logging.error(f"Error occurred during update: {e}")
+        
+        self._dbusservice['/Ac/Power'] = now
+        self._dbusservice['/Ac/L1/Power'] = now
+        self._dbusservice['/Ac/L1/Voltage'] = 230
+        self._dbusservice['/Ac/L1/Current'] = round(now / 230, 3)
+
         return True
 
     def _get_headers(self):
